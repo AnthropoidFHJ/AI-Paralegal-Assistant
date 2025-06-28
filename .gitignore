@@ -1,9 +1,5 @@
 # Remove Confidential File & Folder
 Data/
-Templates/
-Static/
-Requirements
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
