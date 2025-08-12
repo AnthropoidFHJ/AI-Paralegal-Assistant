@@ -2,13 +2,11 @@ import os
 from pathlib import Path
 import logging
 
-# Logging config
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s')
 
-# List of required files
 list_of_files = [
     "src/__init__.py",
-    "src/helper.py",
+    "src/chunker.py",
     "src/prompt.py",
     ".env",
     "setup.py",
@@ -16,10 +14,9 @@ list_of_files = [
     "Templates/chat.html",
     "Static/style.css",
     "Output",
-    "Store_Index.py"
+    "pinecone_db.py"
 ]
 
-# Create directories and files
 for filepath in list_of_files:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)

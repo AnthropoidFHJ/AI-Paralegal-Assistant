@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify, request
-from src.helper import download_hugging_face_embeddings
+from src.chunker import download_hugging_face_embeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain_groq import ChatGroq
 from langchain.chains import create_retrieval_chain
@@ -61,4 +61,4 @@ def chat():
         return str(response["answer"])
 
 if __name__ == '__main__':
-      app.run(host="0.0.0.0", port = 8880, debug = True)
+    app.run(host="127.0.0.1", port = 8880, debug = True)
